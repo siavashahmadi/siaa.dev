@@ -1,15 +1,130 @@
+nav {
+    display: inline-block;
+    width: 100%;
+    text-align: right;
+    outline: 1px solid blue;
+  }
+  
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: inline-block;
+    outline: 3px solid green;
+    direction: rtl;
+}
+  
+li {
+    display: inline-block;
+    margin-left: 0.5em;
+    margin-right: 0.5em;
+}
+  
+a {
+    display: inline-block;
+    padding: 0.5em 1em;
+    border-radius: 0.75em;
+    background-color: #b8b5b5;
+    color: #333;
+    font-family: 'Raleway', sans-serif;
+    font-size: 1em;
+    text-decoration: none;
+    text-transform: uppercase;
+    transition: background-color 0.2s ease-out;
+}
+  
+a:hover {
+    background-color: #f1f1f1;
+    color: #333;
+    transform: scale(1.1);
+    transition: transform 0.1s ease-in-out;
+}
+  
 img {
     width: 30%;
     margin: calc(10%/6);
     border-radius: 0.75em 0.75em;
+    
 } 
 
-nav {
-    font-family: 'Raleway', sans-serif;
-    font-size: 2.0em;
-    text-transform: uppercase;
-    border-bottom: 2px solid #f1f1f1;
-    width: 48%;
-    margin-left: calc(10%/6);
-    padding: 1em 0;
+img:hover {
+    transform: scale(1.08);
+    transition: transform 0.1s ease-in-out;
 }
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #4b4a4a;
+    color: #fff;
+    padding: 1em;
+    border-bottom: 5px solid purple;
+}
+
+header div {
+    display: inline-block;
+    text-align: center;
+    width: 100%;
+}
+
+.divHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nameHeader {
+    font-family: 'Raleway', sans-serif;
+    float: left;
+    font-size: 2.5em;
+}
+
+div {
+    outline: 2px solid hotpink;
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    margin: 1em;
+    align-items: center;
+}
+
+footer {
+    color: #fff;
+    text-align: center;
+    padding: 1em;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #4b4a4a;
+}
+
+p {
+    margin: 0 auto;
+    font-family: 'Raleway', sans-serif;
+}
+
+@media (max-width: 768px) {
+    nav ul {
+        display: none;
+    }
+    
+    .menuIcon {
+        display: block;
+    }
+
+    .menuIcon:focus + nav ul {
+        display: block;
+    }
+}
+
+.menuIcon {
+    display: none;
+    background-color: #b8b5b5;
+    color: #333;
+    font-size: 2em;
+    padding: 0.5em;
+    border-radius: 0.75em;
+  }
